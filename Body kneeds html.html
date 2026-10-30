@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Body Kneeds — Massage &amp; Therapeutic Bodywork, Stockholm</title>
+<meta name="description" content="A candle-lit sanctuary for hands-on healing. Swedish, Thai, sports massage and lymphatic drainage in Stockholm, by appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1e9df;--bg2:#e6dacb;--ink:#2a1a26;--mute:#6a565b;--flame:#9a4f0c;--line:rgba(42,26,38,.18);
+  --pool:rgba(236,160,58,.38);--btn-bg:#2a1a26;--btn-ink:#f1e9df;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171016;--bg2:#21161f;--ink:#f1e7da;--mute:#b9a9a0;--flame:#f2b04c;--line:rgba(241,231,218,.16);
+  --pool:rgba(242,176,76,.20);--btn-bg:#f2b04c;--btn-ink:#1a0f17;}}
+:root[data-theme="dark"]{
+  --bg:#171016;--bg2:#21161f;--ink:#f1e7da;--mute:#b9a9a0;--flame:#f2b04c;--line:rgba(241,231,218,.16);
+  --pool:rgba(242,176,76,.20);--btn-bg:#f2b04c;--btn-ink:#1a0f17;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--flame);outline-offset:3px;border-radius:2px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--serif);font-weight:300;margin:0;line-height:1.05;letter-spacing:-.02em}
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:92vh;display:flex;flex-direction:column;--mx:72%;--my:38%}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(34rem circle at var(--mx) var(--my),var(--pool),transparent 70%)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;position:relative;z-index:2}
+.brand{font-family:var(--serif);font-size:1.25rem;letter-spacing:-.01em;text-decoration:none}
+.top nav{display:flex;gap:1.5rem;align-items:center;font-size:.95rem}
+.top nav a{text-decoration:none;color:var(--mute)}
+.top nav a:hover{color:var(--ink)}
+.theme{background:none;border:1px solid var(--line);color:var(--ink);width:2.25rem;height:2.25rem;border-radius:50%;cursor:pointer;font-size:1rem}
+.hero .wrap{flex:1;display:grid;grid-template-columns:1.4fr .6fr;align-items:end;gap:2rem;padding-bottom:4.5rem;position:relative;z-index:1;width:100%}
+.hero h1{font-size:clamp(3.4rem,10.5vw,8.5rem);font-weight:300}
+.hero h1 em{font-style:italic;color:var(--flame)}
+.lede{max-width:30rem;color:var(--mute);margin:1.75rem 0 2.25rem;font-size:1.15rem}
+.btn{display:inline-block;background:var(--btn-bg);color:var(--btn-ink);border:0;padding:.95rem 1.7rem;border-radius:999px;font:600 1rem var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line);margin-left:.5rem}
+.candle{justify-self:center;width:min(100%,13rem);height:auto;align-self:end}
+.flame{transform-origin:50% 100%;animation:flick 3.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.96,1.05) rotate(-1.5deg)}55%{transform:scale(1.03,.97) rotate(1deg)}80%{transform:scale(.98,1.03) rotate(-.5deg)}}
+/* sections */
+section{padding:6rem 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;margin-bottom:3rem;align-items:end}
+.head h2{font-size:clamp(2.2rem,5vw,3.8rem)}
+.head p{color:var(--mute);margin:0;max-width:32rem}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:1fr 1.3fr auto;gap:1.5rem;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);color:inherit;font:inherit;padding:1.8rem 0;cursor:pointer;transition:padding .25s,background .25s}
+.rows li:last-child .row{border-bottom:1px solid var(--line)}
+.row:hover{padding-left:1rem;background:linear-gradient(90deg,var(--bg2),transparent)}
+.row h3{font-size:clamp(1.9rem,4vw,2.9rem)}
+.row p{margin:0;color:var(--mute)}
+.dur{font-size:.95rem;color:var(--flame);white-space:nowrap;font-weight:500}
+/* finder */
+.finder{background:var(--bg2)}
+.box{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+label{display:block;font-weight:500;font-size:.95rem;margin-bottom:.4rem}
+textarea,input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.8rem 1rem}
+textarea{min-height:9rem;resize:vertical}
+.count{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem;color:var(--mute);font-size:.9rem}
+.result{border-left:2px solid var(--flame);padding:.5rem 0 .5rem 1.75rem;align-self:center;min-height:9rem}
+.result h3{font-size:2.6rem;margin:.2rem 0 .6rem}
+.result p{color:var(--mute);margin:0 0 1.2rem}
+.result .hint{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--mute)}
+/* booking */
+form{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+form .full{grid-column:1/-1}
+.note{color:var(--mute);font-size:.95rem}
+.ok{grid-column:1/-1;color:var(--flame);font-weight:500;min-height:1.5rem}
+/* footer */
+footer{padding:4rem 0 3rem;border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem}
+footer h3{font-size:2rem;margin-bottom:.6rem}
+footer p{margin:.2rem 0;color:var(--mute)}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+.fine{margin-top:3rem;color:var(--mute);font-size:.9rem}
+@media (max-width:760px){
+  .hero{min-height:88vh}.hero .wrap{grid-template-columns:1fr}.candle{display:none}
+  .head,.box,.cols,form{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr auto;gap:.4rem 1rem}.row p{grid-column:1/-1;order:3}
+  section{padding:4rem 0}.top nav a{display:none}.btn.ghost{margin:.6rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){.flame{animation:none}html{scroll-behavior:auto}.btn,.row{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="wrap" style="flex:none;display:block;padding-bottom:0">
+    <div class="top">
+      <a class="brand" href="#top">Body Kneeds</a>
+      <nav><a href="#rituals">Treatments</a><a href="#find">Find yours</a><a href="#book">Book</a>
+      <button class="theme" id="theme" aria-label="Switch between light and dark">◐</button></nav>
+    </div>
+  </div>
+  <div class="wrap">
+    <div>
+      <h1>The quiet,<br><em>restored.</em></h1>
+      <p class="lede">Swedish, Thai, sports and lymphatic drainage massage in Stockholm. Sessions run 45 to 90 minutes. Open Tuesday to Sunday, by appointment.</p>
+      <a class="btn" href="#book">Request a booking</a><a class="btn ghost" href="#find">Not sure which treatment?</a>
+    </div>
+    <svg class="candle" viewBox="0 0 120 260" aria-hidden="true">
+      <defs>
+        <radialGradient id="g" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#ffd58a"/><stop offset="1" stop-color="#f2a33c" stop-opacity="0"/></radialGradient>
+        <linearGradient id="w" x1="0" x2="1"><stop offset="0" stop-color="#d9c9b4"/><stop offset=".5" stop-color="#f4e9d8"/><stop offset="1" stop-color="#cdb99f"/></linearGradient>
+      </defs>
+      <circle cx="60" cy="62" r="58" fill="url(#g)" opacity=".7"/>
+      <g class="flame"><path d="M60 22c14 20 20 32 20 46a20 20 0 0 1-40 0c0-14 6-26 20-46z" fill="#f6b04a"/><path d="M60 46c7 10 10 17 10 24a10 10 0 0 1-20 0c0-7 3-14 10-24z" fill="#fff0c8"/></g>
+      <rect x="58.5" y="86" width="3" height="14" fill="#2a1a26"/>
+      <rect x="22" y="98" width="76" height="152" rx="8" fill="url(#w)"/>
+      <path d="M22 106q38 14 76 0v10q-38 14-76 0z" fill="#fff8ea" opacity=".6"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section id="rituals"><div class="wrap">
+  <div class="head"><h2>Four ways to be held.</h2><p>Every treatment is slow, private and scaled to your body that day. Choose one to start a booking.</p></div>
+  <ul class="rows" id="rows"></ul>
+</div></section>
+
+<section class="finder" id="find"><div class="wrap">
+  <div class="head"><h2>Tell us how you feel.</h2><p>Sore shoulders, heavy legs, a mind that won’t quieten. Describe it in your own words and we’ll suggest where to begin.</p></div>
+  <div class="box">
+    <div>
+      <label for="feel">How does your body feel?</label>
+      <textarea id="feel" maxlength="600" placeholder="e.g. Stiff neck from desk work and I can’t switch off at night"></textarea>
+      <div class="count"><span id="n">0/600</span><button class="btn" id="suggest" type="button">Suggest my treatment</button></div>
+    </div>
+    <div class="result" aria-live="polite" id="result"><p class="hint">Your suggestion will appear here.</p></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <div class="head"><h2>Request a time.</h2><p>Tuesday to Sunday. Arrive ten minutes before your hour. Send a request and we’ll confirm by email.</p></div>
+  <form id="form">
+    <div><label for="t">Treatment</label><select id="t" name="t"></select></div>
+    <div><label for="when">Preferred time</label><input id="when" type="datetime-local" required></div>
+    <div><label for="name">Name</label><input id="name" autocomplete="name" required></div>
+    <div><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+    <div class="full"><label for="tel">Telephone (optional)</label><input id="tel" type="tel" autocomplete="tel"></div>
+    <div class="full"><label for="msg">Anything we should know (optional)</label><textarea id="msg" style="min-height:6rem" placeholder="Injuries, pressure preference, medical conditions"></textarea></div>
+    <div class="full"><button class="btn" type="submit">Send booking request</button></div>
+    <p class="ok" id="ok" role="status"></p>
+  </form>
+  <p class="note">Prefer email? Write to <a href="mailto:massagehab@outlook.com">massagehab@outlook.com</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h3>Body Kneeds</h3><p>Massage &amp; therapeutic bodywork.</p><p>Stockholm, by appointment.</p></div>
+    <div><p><a href="mailto:massagehab@outlook.com">massagehab@outlook.com</a></p><p><a href="tel:+46725184304">+46 72 518 43 04</a></p></div>
+    <div><p><a href="https://instagram.com/bodykneeds">Instagram @bodykneeds</a></p><p><a href="https://tiktok.com/@bodykneeds">TikTok @bodykneeds</a></p></div>
+  </div>
+  <p class="fine">© Body Kneeds. Massage is not a substitute for medical care.</p>
+</div></footer>
+
+<script>
+const R=[
+ {k:"Swedish",d:"60 or 90 min",p:"Long warm strokes, oil, and the slow release of held tension.",w:"relax stress tense tension tired sleep anxious overwhelmed calm unwind burnout mind switch quieten first"},
+ {k:"Thai",d:"90 min",p:"Assisted stretches and compressed rhythm on a firm floor mat.",w:"stiff stretch flexibility mobility posture desk hips back neck tight rigid sitting"},
+ {k:"Sports",d:"45 or 60 min",p:"Deep, targeted work for the body that has trained hard.",w:"sore training train gym run running marathon muscle muscles knot knots injury deep lift workout athlete cycling"},
+ {k:"Lymphatic drainage",d:"60 min",p:"Feather-light, rhythmic work that moves fluid and quiets the system.",w:"puffy swollen swelling heavy legs fluid bloated retention flight travel sluggish light gentle"}
+];
+const $=s=>document.querySelector(s);
+const rows=$("#rows"),sel=$("#t");
+R.forEach((r,i)=>{
+  rows.insertAdjacentHTML("beforeend",`<li><button class="row" data-i="${i}"><h3>${r.k}</h3><span class="dur">${r.d}</span><p>${r.p}</p></button></li>`);
+  sel.insertAdjacentHTML("beforeend",`<option>${r.k}</option>`);
+});
+function pick(i){sel.selectedIndex=i;$("#book").scrollIntoView();setTimeout(()=>$("#when").focus({preventScroll:true}),400)}
+rows.addEventListener("click",e=>{const b=e.target.closest(".row");if(b)pick(+b.dataset.i)});
+/* finder */
+const feel=$("#feel");
+feel.addEventListener("input",()=>$("#n").textContent=feel.value.length+"/600");
+$("#suggest").addEventListener("click",()=>{
+  const t=feel.value.toLowerCase(),out=$("#result");
+  if(!t.trim()){out.innerHTML='<p class="hint">Write a few words about how you feel and we’ll take it from there.</p>';return}
+  const s=R.map((r,i)=>[r.w.split(" ").filter(w=>t.includes(w)).length,i]).sort((a,b)=>b[0]-a[0]||a[1]-b[1]);
+  const r=R[s[0][1]];
+  out.innerHTML=`<h3>${r.k}</h3><p>${r.p} ${r.d}.</p><button class="btn" data-i="${s[0][1]}" type="button">Book ${r.k}</button><p class="note" style="margin-top:1rem">A suggestion, not a diagnosis. Mention any medical conditions when you book.</p>`;
+  out.querySelector(".btn").addEventListener("click",e=>pick(+e.target.dataset.i));
+});
+/* booking: opens the visitor's email app with the request filled in */
+$("#form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const g=id=>$(id).value.trim();
+  const body=`Treatment: ${g("#t")}\nPreferred time: ${g("#when").replace("T"," ")}\nName: ${g("#name")}\nEmail: ${g("#email")}\nTelephone: ${g("#tel")||"-"}\n\n${g("#msg")}`;
+  location.href="mailto:massagehab@outlook.com?subject="+encodeURIComponent("Booking request: "+g("#t"))+"&body="+encodeURIComponent(body);
+  $("#ok").textContent="Your email app should open with the request ready to send. If it doesn’t, write to massagehab@outlook.com.";
+});
+/* candle-light follows the pointer */
+const h=$(".hero");
+h.addEventListener("pointermove",e=>{const b=h.getBoundingClientRect();h.style.setProperty("--mx",e.clientX-b.left+"px");h.style.setProperty("--my",e.clientY-b.top+"px")});
+/* theme */
+$("#theme").addEventListener("click",()=>{
+  const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()==="#171016";
+  d.dataset.theme=dark?"light":"dark";
+});
+</script>
+</body>
+</html>
